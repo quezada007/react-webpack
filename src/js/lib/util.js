@@ -1,6 +1,6 @@
 /**
  * Loop through a list of elements or nodes (NodeList) and call the callback function
- * 
+ *
  * @param {object} nodeList The NodeList from the querySelectorAll
  * @param {function} cb The callback function passed
  */
@@ -14,7 +14,7 @@ export function each(nodeList, cb) {
 
 /**
  * Feature Sniffer
- * 
+ *
  * It checks for features on the browsers
  */
 export const featSniffer = {
