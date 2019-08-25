@@ -41,12 +41,11 @@ $local-fonts: (
     )
 );
 
-// Fonts 
-$font-family--primary: "Open Sans", sans-serif;
-$font-family--secondary: Oswald, sans-serif,
-sans-serif;
+// Fonts
+$font-family--primary: 'Open Sans', sans-serif;
+$font-family--secondary: Oswald, sans-serif, sans-serif;
 
 // Shadow Styles
 $shadows: (
-    button: "0 10px 15px 0 rgba(0,0,0,0.1)"
+    button: '0 10px 15px 0 rgba(0, 0, 0, 0.1)'
 );

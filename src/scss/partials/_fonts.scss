@@ -3,7 +3,7 @@ $font-root: '../fonts/' !default;
 
 /**
  * Import Fonts like Google fonts
- * 
+ *
  * This mixing will go through all the $font-imports array located in the settings.scss file
  */
 @each $font in $font-imports {
@@ -18,11 +18,12 @@ $font-map in $local-fonts {
     @each $font in $font-map {
         @font-face {
             font-family: $font-family;
-            src: url('#{$font-root}#{map-get($font, font)}.ttf') format('truetype'),
-                 url('#{$font-root}#{map-get($font, font)}.woff') format('woff'),
-                 url('#{$font-root}#{map-get($font, font)}.eot'),
-                 url('#{$font-root}#{map-get($font, font)}.eot?#iefix') format('embedded-opentype'),
-                 url('#{$font-root}#{map-get($font, font)}.otf') format('opentype');
+            src:
+                url('#{$font-root}#{map-get($font, font)}.ttf') format('truetype'),
+                url('#{$font-root}#{map-get($font, font)}.woff') format('woff'),
+                url('#{$font-root}#{map-get($font, font)}.eot'),
+                url('#{$font-root}#{map-get($font, font)}.eot?#iefix') format('embedded-opentype'),
+                url('#{$font-root}#{map-get($font, font)}.otf') format('opentype');
             font-weight: map-get($font, weight);
             font-style: map-get($font, style);
         }

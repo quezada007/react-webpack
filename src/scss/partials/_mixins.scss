@@ -16,12 +16,10 @@
 
         @if map-has-key($breakpoints, nth($breakpoint, 2)) {
             $bp: append($bp, map-get($breakpoints, nth($breakpoint, 2)));
-
         }
 
         @else {
             $bp: append($bp, nth($breakpoint, 2));
-
         }
 
         @include breakpoint($bp) {
@@ -32,11 +30,11 @@
     @if (type-of($breakpoint)=='string') {
         @if map-has-key($breakpoints, $breakpoint) {
             @include breakpoint(map-get($breakpoints, $breakpoint)) {
-                @content
+                @content;
             }
         }
     }
-};
+}
 
 // Buttons
 @mixin button($bg-color:color(red), $color:color(white)) {
