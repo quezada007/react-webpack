@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -5,14 +6,14 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Destination directory
-const dist = 'dist'; 
+const dist = 'dist';
 
 const config = {
     /**
      *  Entry source js files
      */
     entry: {
-        app: ['@babel/polyfill', './src/js/app.js']
+        app: ['@babel/polyfill', './src/js/App.jsx']
     },
     /**
      * Output js files
@@ -25,6 +26,9 @@ const config = {
     devServer: {
         contentBase: './' + dist
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         rules: [
             /**
@@ -32,7 +36,7 @@ const config = {
              *  Please update .eslintrc.js for configuration. Site: http://eslint.org/
              */
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 enforce: 'pre',
                 exclude: /(node_modules|vendors)/,
                 loader: 'eslint-loader'
@@ -45,10 +49,7 @@ const config = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react']
-                    }
+                    loader: 'babel-loader'
                 }
             },
             /**
@@ -154,8 +155,8 @@ const config = {
              * https://github.com/NMFR/optimize-css-assets-webpack-plugin
              */
             new OptimizeCSSAssetsPlugin({
-                cssProcessorOptions: { 
-                    sourceMap: true 
+                cssProcessorOptions: {
+                    sourceMap: true
                 }
             })
         ]
