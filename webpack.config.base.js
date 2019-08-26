@@ -1,14 +1,14 @@
 /* eslint-disable */
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Destination directory
 const dist = 'dist';
 
-const config = {
+module.exports = {
     /**
      *  Entry source js files
      */
@@ -19,12 +19,9 @@ const config = {
      * Output js files
      */
     output: {
-        path: path.resolve(__dirname, dist + '/assets/'),
+        path: path.join(__dirname, dist),
         filename: 'js/[name].js', // 'js/[name].[hash].js',
         publicPath: '/'
-    },
-    devServer: {
-        contentBase: './' + dist
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -138,43 +135,5 @@ const config = {
             filename: 'index.html',
             inject: true
         })
-    ],
-    optimization: {
-        minimizer: [
-            /**
-             * Minimize JS files
-             * https://webpack.js.org/plugins/uglifyjs-webpack-plugin/
-             */
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true
-            }),
-            /**
-             * Minimize CSS files
-             * https://github.com/NMFR/optimize-css-assets-webpack-plugin
-             */
-            new OptimizeCSSAssetsPlugin({
-                cssProcessorOptions: {
-                    sourceMap: true
-                }
-            })
-        ]
-    }
-};
-
-module.exports = (env, argv) => {
-
-    if (argv.mode === 'development') {
-        /**
-         * Create source maps for JS and the SCSS files
-         */
-        config.devtool = 'source-map';
-    }
-
-    if (argv.mode === 'production') {
-        // Production
-    }
-
-    return config;
-};
+    ]
+}

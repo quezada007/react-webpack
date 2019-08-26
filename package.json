@@ -2,19 +2,20 @@
   "name": "react-webpack-babel-sass-pug-starter",
   "version": "1.0.0",
   "description": "React Starter Project",
-  "main": "app.js",
+  "main": "App.jsx",
   "scripts": {
     "clean": "rimraf dist coverage",
-    "dev": "npm run clean && webpack --mode development --colors",
-    "prod": "npm run clean && webpack --mode production --colors",
-    "start": "webpack-dev-server --mode development --open",
+    "dev": "npm run clean && webpack --config webpack.config.dev.js",
+    "build": "npm run clean && webpack --config webpack.config.prod.js",
+    "start": "npm run clean && webpack-dev-server --config webpack.config.dev.js",
+    "prod": "npm run build",
     "test": "jest --coverage"
   },
   "keywords": [
     "React",
     "Webpack",
     "Babel",
-    "SASS",
+    "SCSS",
     "Pug"
   ],
   "author": "Jose Quezada",
@@ -47,7 +48,6 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.4",
     "pug-html-loader": "^1.1.5",
@@ -57,10 +57,10 @@
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-webpack-plugin": "^0.10.5",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
   },
   "browserslist": [
     "> 1%",
