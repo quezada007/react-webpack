@@ -1,8 +1,6 @@
 /* eslint-disable */
 const path = require('path');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Destination directory
@@ -13,7 +11,7 @@ module.exports = {
      *  Entry source js files
      */
     entry: {
-        app: ['@babel/polyfill', './src/js/App.jsx']
+        app: ['./src/js/App.jsx']
     },
     /**
      * Output js files

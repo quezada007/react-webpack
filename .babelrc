@@ -1,6 +1,18 @@
 {
     "presets": [
-        "@babel/preset-env",
+        ["@babel/preset-env", {
+            "targets": [
+                "last 2 versions",
+                "not dead",
+                "not < 2%",
+                "ie 11"
+            ],
+            "useBuiltIns": "entry",
+            "corejs": {
+                "version": 3,
+                "proposals": true
+            }
+        }],
         "@babel/preset-react"
     ],
     "plugins": [

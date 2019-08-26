@@ -25,10 +25,11 @@
   "author": "Jose Quezada",
   "license": "ISC",
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "core-js": "^3.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -62,13 +63,15 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "webpack": "^4.39.2",
+    "webpack-bundle-analyzer": "^3.4.1",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.1"
   },
   "browserslist": [
-    "> 1%",
     "last 2 versions",
+    "not dead",
+    "not < 2%",
     "ie 11"
   ]
 }
