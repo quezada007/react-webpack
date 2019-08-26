@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "React Starter Project",
   "main": "App.jsx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quezada007/react-webpack.git"
+  },
   "scripts": {
     "clean": "rimraf dist coverage",
     "dev": "npm run clean && webpack --config webpack.config.dev.js",
