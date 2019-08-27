@@ -11,7 +11,7 @@ module.exports = {
      *  Entry source js files
      */
     entry: {
-        app: ['./src/js/App.jsx']
+        app: ['react-hot-loader/patch', './src/js/index.jsx']
     },
     /**
      * Output js files
@@ -57,7 +57,12 @@ module.exports = {
                      * MiniCssExtractPlugin
                      * https://webpack.js.org/plugins/mini-css-extract-plugin/
                      */
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                          hmr: true
+                        }
+                    },
                     {
                         loader: 'css-loader',
                         options: {

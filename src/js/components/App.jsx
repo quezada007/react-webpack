@@ -1,19 +1,7 @@
-// Import SCSS so they get compiled
-import '../scss/styles.scss';
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-// Check for Web Accessibility issues in development mode
-if (process.env.NODE_ENV === 'development') {
-    // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-    const axe = require('react-axe');
-    // Check the console for any accessibility issues
-    axe(React, ReactDOM, 1000);
-}
-
-export default class App extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
 
@@ -30,7 +18,7 @@ export default class App extends React.Component {
         const { count } = this.state;
         return (
             <div>
-                <h1>Hello Wold</h1>
+                <h1>Hello World</h1>
                 <div>
                     The count is
                     {' '}
@@ -55,4 +43,4 @@ export default class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default hot(App);
