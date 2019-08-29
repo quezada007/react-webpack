@@ -1,15 +1,16 @@
 # React Starter Project
 
-Simple starter project using React, Webpack, SCSS, Babel, ESLint and Pug.
+Simple starter project using React, Webpack, SCSS, Babel, ESLint, Stylelint and Pug.
 
 ### System Dependencies
 * [Node.js](https://nodejs.org/en/) and NPM. (**Note:** NPM comes with Node.js)
 
 ### Build Tools Used
 * [Webpack](https://webpack.js.org/) - Module Bundler
-* [SASS](http://sass-lang.com/) - CSS Preprocessor
+* [SASS](https://sass-lang.com/) - CSS Preprocessor
 * [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript
-* [ESLint](http://eslint.org/) - JavaScript Linting Utility
+* [ESLint](https://eslint.org/) - JavaScript Linting Utility
+* [Stylelint](https://stylelint.io/) - Styles Linting Utility
 * [Babel](https://babeljs.io/) - JavaScript Compiler
 * [Pug](https://pugjs.org/api/getting-started.html) - Pug template engine
 
@@ -21,7 +22,7 @@ Open Terminal and install all the Node Modules needed by running the following c
 npm install
 ```
 
-### Development 
+### Development
 
 To start development, run the following command on your Terminal:
 
