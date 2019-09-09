@@ -1,6 +1,8 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
 
+const Message = React.lazy(() => import('./Message'));
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -19,25 +21,20 @@ class App extends React.Component {
         return (
             <div>
                 <h1>Hello World</h1>
-                <div>
+                <p>
                     The count is
                     {' '}
                     {count}
-                </div>
+                </p>
                 <button type="button" onClick={this.incrementCount}>Increment Count</button>
-                <div>Icons</div>
-                <ul>
-                    <li>
-                        Home
-                        {' '}
-                        <i className="icon-home" />
-                    </li>
-                    <li>
-                        Checkmark
-                        {' '}
-                        <i className="icon-check" />
-                    </li>
-                </ul>
+                <p>When the count reaches 10, a new component will load dynamically.</p>
+                {count >= 10
+                    ? (
+                        <React.Suspense fallback={<div>Loading...</div>}>
+                            <Message />
+                        </React.Suspense>
+                    )
+                    : null}
             </div>
         );
     }
