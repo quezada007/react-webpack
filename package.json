@@ -20,7 +20,10 @@
     "Webpack",
     "Babel",
     "SCSS",
-    "Pug"
+    "Pug",
+    "ESLint",
+    "Stylelint",
+    "Jest"
   ],
   "author": "Jose Quezada",
   "license": "ISC",
