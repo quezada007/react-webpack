@@ -3,9 +3,11 @@
         "browser": true,
         "node": true,
         "commonjs": true,
-        "es6": true
+        "es6": true,
+        "jest/globals": true
     },
-    "extends": "airbnb",
+    "plugins": ["jest"],
+    "extends": ["airbnb", "plugin:jest/recommended"],
     "parser": "babel-eslint",
     "rules": {
         "indent": ["warn", 4],
