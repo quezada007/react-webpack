@@ -1,6 +1,6 @@
 # React Starter Project
 
-Simple starter project using React, Webpack, SCSS, Babel, ESLint, Stylelint and Pug.
+Simple starter project using React, Webpack, SCSS, Babel, ESLint, Stylelint, Pug and Jest.
 
 ### System Dependencies
 * [Node.js](https://nodejs.org/en/) and NPM. (**Note:** NPM comes with Node.js)
@@ -12,7 +12,8 @@ Simple starter project using React, Webpack, SCSS, Babel, ESLint, Stylelint and 
 * [ESLint](https://eslint.org/) - JavaScript Linting Utility
 * [Stylelint](https://stylelint.io/) - Styles Linting Utility
 * [Babel](https://babeljs.io/) - JavaScript Compiler
-* [Pug](https://pugjs.org/api/getting-started.html) - Pug template engine
+* [Pug](https://pugjs.org/api/getting-started.html) - Pug Template Engine
+* [Jest](https://jestjs.io/) - JavaScript Testing Framework
 
 
 ### Getting Started
@@ -38,4 +39,12 @@ If you just want to compile SCSS and JS without running the watch or live reload
 
 ```bash
 npm run build
+```
+
+### Unit Testing
+
+To run all of your unit testing, run the following command:
+
+```bash
+npm run test
 ```
