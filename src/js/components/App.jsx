@@ -1,7 +1,7 @@
 import { hot } from 'react-hot-loader/root';
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 
-const Message = React.lazy(() => import('./Message'));
+const Message = lazy(() => import('./Message'));
 
 class App extends React.Component {
     constructor(props) {
@@ -30,9 +30,9 @@ class App extends React.Component {
                 <p>When the count reaches 10, a new component will load dynamically.</p>
                 {count >= 10
                     ? (
-                        <React.Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<div>Loading...</div>}>
                             <Message />
-                        </React.Suspense>
+                        </Suspense>
                     )
                     : null}
             </div>
