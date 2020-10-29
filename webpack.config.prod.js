@@ -1,5 +1,5 @@
 /* eslint-disable */
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.config.base');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
