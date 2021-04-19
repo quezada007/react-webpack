@@ -1,4 +1,3 @@
-import { hot } from 'react-hot-loader/root';
 import React, { Suspense, lazy } from 'react';
 
 const Message = lazy(() => import('./Message'));
@@ -40,4 +39,4 @@ class App extends React.Component {
     }
 }
 
-export default hot(App);
+export default App;
