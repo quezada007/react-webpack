@@ -62,9 +62,7 @@ module.exports = {
                      */
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                          hmr: true
-                        }
+                        options: {}
                     },
                     {
                         loader: 'css-loader',
