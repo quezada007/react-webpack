@@ -9,7 +9,7 @@ import App from './components/App';
 // Check for Web Accessibility issues in development mode
 if (process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-    const axe = require('react-axe');
+    const axe = require('@axe-core/react');
     // Check the console for any accessibility issues
     axe(React, ReactDOM, 1000);
 }
