@@ -26,6 +26,7 @@ $font-map in $local-fonts {
                 url('#{$font-root}#{map-get($font, font)}.otf') format('opentype');
             font-weight: map-get($font, weight);
             font-style: map-get($font, style);
+            font-display: swap;
         }
     }
 }
